@@ -24,12 +24,14 @@ In this sample project, the homepage displays all current categories along with 
 ![Catalog App](http://i.imgur.com/dfrdQ2C.png)
 
 http://localhost:8000/
+
 Selecting a specific category shows you all the items available for that category.
 
 
 
 ![Catalog App Items](http://i.imgur.com/lSZRAdm.png)
 http://localhost:8000/catalog/Snowboarding/items
+
 Selecting a specific item shows you specific information of that item.
 
 ![Catalog App Snowboard](http://i.imgur.com/tgRi4Mt.png) 
@@ -56,3 +58,18 @@ The application provides a JSON endpoint, at the very least.
 
 ![Catalog App Code](http://i.imgur.com/oMQaCs8.png)
 http://localhost:8000/catalog.json
+
+
+## Project Details
+### How will I complete this project?
+This project is connected to the Full Stack Foundations and Authentication and Authorization courses, but depending on your background knowledge you may not need the entirety of both courses to complete this project. Here's what you should do:
+
+1. Install Vagrant and VirtualBox
+2. Clone the fullstack-nanodegree-vm
+3. Launch the Vagrant VM (vagrant up)
+4. Write your Flask application locally in the vagrant/catalog directory (which will automatically be synced to /vagrant/catalog within the VM).
+5. Run your application within the VM (python /vagrant/catalog/application.py)
+6. Access and test your application by visiting http://localhost:8000 locally
+Get started with this helpful guide.
+You can find the link to the fullstack-nanodegree-vm [here](http://github.com/udacity/fullstack-nanodegree-vm).
+
