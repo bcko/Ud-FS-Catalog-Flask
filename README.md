@@ -7,6 +7,6 @@ Udacity Full Stack Web Developer Nanodegree Project
 
 ## How to run
 ```bash
-export FLASK_APP=hello.py
+export FLASK_APP=app.py
 flask run
 ```
