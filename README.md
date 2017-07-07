@@ -2,7 +2,7 @@
 Udacity Full Stack Web Developer Nanodegree Project
 
 ## Requirements
-* Flask 0.12.1
+* Flask 0.12.2
 
 
 ## How to run
