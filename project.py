@@ -28,6 +28,9 @@ def menuItemJSON(restaurant_id, menu_id):
 
 
 @app.route('/')
+def hello():
+    return 'hello world'
+
 @app.route('/restaurants/<int:restaurant_id>/menu')
 def restaurantMenu(restaurant_id):
     restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
