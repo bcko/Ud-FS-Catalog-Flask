@@ -6,8 +6,11 @@ flask 0.12.2
 
 ## How to run
 ```bash
-$ export FLASK_APP=app.py
-$ flask run
+$ python3 app.py 
 
 * Running on http://127.0.0.1:5000/
 ```
+
+## reference
+http://flask.pocoo.org/
+http://flask-sqlalchemy.pocoo.org/2.3/
