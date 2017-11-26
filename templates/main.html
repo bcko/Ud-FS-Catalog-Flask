@@ -1,14 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+		<title>Ann Arbor Restaurants</title>
+		<meta name="viewport" content="initial-scale=1.0">
+    	<meta charset="utf-8">
+    	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    	<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    	
 	</head>
-	<body>
+  <!-- tool bar -->
+  <body class="mdc-typography">
+
+    <header class="mdc-toolbar">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <a href="#" class="material-icons mdc-toolbar__menu-icon">menu</a>
+          <span class="mdc-toolbar__title">Ann Arbor Restaurants</span>
+        </section>
+      </div>
+    </header>
+    
+<!-- side drawer -->    
+<aside class="mdc-temporary-drawer mdc-typography">
+  <nav class="mdc-temporary-drawer__drawer">
+    <header class="mdc-temporary-drawer__header">
+      <div class="mdc-temporary-drawer__header-content">
+        Header here
+      </div>
+    </header>
+    <nav id="icon-with-text-demo" class="mdc-temporary-drawer__content mdc-list">
+      <a class="mdc-list-item mdc-temporary-drawer--selected" href="#">
+        <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">inbox</i>Inbox
+      </a>
+      <a class="mdc-list-item" href="#">
+        <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">star</i>Star
+      </a>
+    </nav>
+  </nav>
+</aside>
+
 		<div class="container">
 			{% block content %}
 			{% endblock %}
 		</div>
-	</body>
+
+  </body>
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <script>
+
+
+	// https://material.io/components/web/catalog/drawers/
+	let drawer = new mdc.drawer.MDCTemporaryDrawer(document.querySelector('.mdc-temporary-drawer'));
+document.querySelector('.mdc-toolbar__menu-icon').addEventListener('click', () => drawer.open = true);
+
+	// autoinitialize all material UI components
+	// https://material.io/components/web/catalog/auto-init/
+	mdc.autoInit();
+   </script>
 </html>
