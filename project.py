@@ -1,22 +1,15 @@
-from flask import (Flask, 
-                    render_template, 
-                    request, 
-                    redirect, 
-                    jsonify, 
-                    url_for, 
-                    flash,
-                    make_response)
+import random
+import string
+import httplib2
+import json
+import requests
+from flask import (Flask, render_template, request, redirect, jsonify, url_for, flash, make_response)
 from sqlalchemy import create_engine, asc
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Restaurant, MenuItem, User
 from flask import session as login_session
-import random
-import string
 from oauth2client.client import flow_from_clientsecrets
 from oauth2client.client import FlowExchangeError
-import httplib2
-import json
-import requests
 
 app = Flask(__name__)
 
@@ -302,8 +295,6 @@ def newMenuItem(restaurant_id):
         return render_template('newmenuitem.html', restaurant_id=restaurant_id)
 
 # Edit a menu item
-
-
 @app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/edit', methods=['GET', 'POST'])
 def editMenuItem(restaurant_id, menu_id):
     if 'username' not in login_session:
