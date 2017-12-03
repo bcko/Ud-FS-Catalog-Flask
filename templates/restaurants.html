@@ -33,11 +33,14 @@
 	<div class="row padding-top padding-bottom">
 		<div class="col-md-1"></div>
 		<div class="col-md-10 padding-none">
+			{%if 'username' in session %}
 			<a href="{{url_for('newRestaurant')}}">
 				<button class="btn btn-default" id="new-restaurant">
 					<span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>Add Restaurant
 				</button>
 			</a>
+			{% endif %}
+
 		</div>
 		<div class="col-md-1"></div>
 	</div>
