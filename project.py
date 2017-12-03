@@ -27,6 +27,17 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
+# Flask Login Decorator 
+# http://flask.pocoo.org/docs/0.12/patterns/viewdecorators/
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if g.user is None:
+            return redirect(url_for('login', next=request.url))
+        return f(*args, **kwargs)
+    return decorated_function
+
+
 # Create anti-forgery state token
 @app.route('/login')
 def showLogin():

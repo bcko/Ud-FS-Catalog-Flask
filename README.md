@@ -17,4 +17,5 @@ python3 project.py
 http://flask.pocoo.org/
 http://flask.pocoo.org/extensions/
 http://flask-sqlalchemy.pocoo.org/2.3/
+http://flask.pocoo.org/docs/0.12/patterns/viewdecorators/
 https://github.com/udacity/ud330
